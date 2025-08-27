@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Using installed Maven"
-                    mvn clean package
+                    /usr/bin/mvn clean package
                 '''
             }
         }
