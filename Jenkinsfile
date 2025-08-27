@@ -18,13 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                    if ! mvn -version > /dev/null 2>&1; then
-                        echo "Maven not found, installing..."
-                        sudo apt-get update
-                        sudo apt-get install -y maven
-                    else
-                        echo "Maven is already installed"
-                    fi
+                    echo "Using installed Maven"
                     mvn clean package
                 '''
             }
